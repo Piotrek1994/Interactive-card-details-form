@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Piotr Prus | Interactive card details form </title>
+
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="front-card_cotainer">
+
+      <img src="./images/bg-card-front.png" alt="front card background">
+      <div class="front-card_logo"></div>
+      <div class="front-card_nubmers">0000 0000 0000 0000</div>
+      <div class="front-card_data"><span class="front-card_name">Jane Appleseed</span><span
+          class="front-card_dataInput">
+          <span class="front-mm">00</span>/<span class="front-yy">00</span></span></div>
+
+    </div>
+
+    <div class="back-card_cotainer">
+      <img src="./images/bg-card-back.png" alt="back card background">
+      <div class="back-card_numbers">000</div>
+    </div>
+
+    <div class="form-card_cotainer hide">
+      <form class="form">
+        <label for="name">Cardholder Name</label>
+        <input class="input" onkeydown="return /[a-z, ]/i.test(event.key)" type="text" name="name" id="name"
+          placeholder="e.g. Jane Appleased"><span></span>
+
+        <label for="card-number">Card Number</label>
+        <input class="input" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');"
+          type="text" maxlength="16" name="card-number" id="card-number" placeholder="e.g. 1234 5678 9123 0000
+      "><span></span>
+
+
+
+        <div class="card-data_container ">
+
+          <div class="exp-data_container">
+            <label for="exp-date">Exp. Date (MM/YY)</label>
+            <input class="input" minlength="1" maxlength="2" type="text"
+              oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');" name="exp-date"
+              id="exp-mm" placeholder="MM">
+            <input class="input" minlength="1" maxlength="2" type="text"
+              oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');" name="exp-date"
+              id="exp-yy" placeholder="YY"><span></span>
+
+          </div>
+
+          <div class="cvc-container"><label for="cvc">CVC</label>
+            <input class="input" minlength="3" maxlength="3" type="text"
+              oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');" name="cvc"
+              id="cvc" placeholder="e.g. 123"><span></span>
+
+          </div>
+
+        </div>
+
+
+        <button class="form-submit_btn" type="submit">Confirm</button>
+      </form>
+    </div>
+
+
+    <div class="form-card_cotainer form-card_accepted">
+
+      
+Thank you!
+  We've added your card details
+  Continue
+
+    </div>
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+  <script src="script.js"></script>
+</body>
+<div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+  Coded by <a href="#">Piotr</a>.
+</div>
+
+</html>
