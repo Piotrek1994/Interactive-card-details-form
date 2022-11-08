@@ -179,8 +179,22 @@ input::placeholder {
 }
 
 .form-card_accepted {
+	height: 300px;
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 	flex-direction: column;
+}
+
+.card_head {
+	font-size: 25px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: hsl(278, 68%, 11%);;
+
+}
+
+.card_details {
+	font-size: 18px;
+	color: rgba(121, 121, 121, 0.507);
 }
